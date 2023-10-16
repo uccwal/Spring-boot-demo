@@ -1,0 +1,37 @@
+# @no-cookie-jar
+GET localhost:8080/api/employees
+Authorization: Basic john fun123
+###
+
+GET localhost:8080/api/employees/2
+Authorization: Basic john fun123
+###
+
+
+POST localhost:8080/api/employees
+Authorization: Basic susan fun123
+Content-Type: application/json
+
+  {
+    "firstName": "Emmassss변경",
+    "lastName": "Baumgarten",
+    "email": "emma@luv2code.com"
+  }
+
+###
+
+PUT localhost:8080/api/employees
+Authorization: Basic susan fun123
+Content-Type: application/json
+
+  {
+    "id": 16,
+    "firstName": "Emmassss변경",
+    "lastName": "Baumgarten",
+    "email": "emma@luv2code.com"
+  }
+###
+
+DELETE localhost:8080/api/employees/16
+Authorization: Basic john fun123
+###
